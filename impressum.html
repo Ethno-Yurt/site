@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum - Ethno Yurt Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/tooplate-antique-cafe.css">
+</head>
+<body>
+    <nav id="tm-nav" class="fixed w-full">
+        <div class="tm-container mx-auto px-2 md:py-6 text-right">
+            <button class="md:hidden py-2 px-2" id="menu-toggle"><i class="fas fa-2x fa-bars tm-text-gold"></i></button>
+            <ul class="mb-3 md:mb-0 text-2xl font-normal flex justify-end flex-col md:flex-row">
+                <li class="inline-block mb-4 mx-4"><a href="index.html" class="tm-text-gold py-1 md:py-3 px-4">Startseite</a></li>
+                <li class="inline-block mb-4 mx-4"><a href="index.html#menu" class="tm-text-gold py-1 md:py-3 px-4">Speisekarte</a></li>
+                <li class="inline-block mb-4 mx-4"><a href="index.html#about" class="tm-text-gold py-1 md:py-3 px-4">Über uns</a></li>
+                <li class="inline-block mb-4 mx-4"><a href="index.html#contact" class="tm-text-gold py-1 md:py-3 px-4">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mx-auto tm-container py-24 sm:py-48 px-4">
+        <div class="bg-white bg-opacity-80 p-12 rounded-xl max-w-4xl mx-auto">
+            <h1 class="text-4xl tm-text-green font-bold mb-8">Impressum</h1>
+
+            <div class="prose max-w-none text-gray-800">
+                <h2 class="text-2xl tm-text-brown font-semibold mt-6 mb-4">Angaben gemäß § 5 TMG</h2>
+                <p class="mb-4">
+                    <strong>Ethno Yurt Restaurant</strong><br>
+                    [Ihre Straße und Hausnummer]<br>
+                    [Ihre Postleitzahl und Stadt]
+                </p>
+
+                <h2 class="text-2xl tm-text-brown font-semibold mt-6 mb-4">Kontakt</h2>
+                <p class="mb-4">
+                    Telefon: +1 002 003 40<br>
+                    Email: hello@ethnoyurt.example
+                </p>
+
+                <h2 class="text-2xl tm-text-brown font-semibold mt-6 mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+                <p class="mb-4">
+                    [Ihr Name]<br>
+                    [Ihre Adresse]
+                </p>
+
+                <h2 class="text-2xl tm-text-brown font-semibold mt-6 mb-4">Umsatzsteuer-Identifikationsnummer</h2>
+                <p class="mb-4">
+                    Gemäß § 27 a Umsatzsteuergesetz (UStG):<br>
+                    [Ihre USt-ID]
+                </p>
+
+                <h2 class="text-2xl tm-text-brown font-semibold mt-6 mb-4">Haftungshinweis</h2>
+                <p class="mb-4">
+                    Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.
+                    Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+                </p>
+
+                <h2 class="text-2xl tm-text-brown font-semibold mt-6 mb-4">Datenschutz</h2>
+                <p class="mb-4">
+                    Die Nutzer dieser Website treten mit uns über das Kontaktformular in Kontakt. Bei der Übermittlung von Daten
+                    über das Formular werden diese Daten unter Beachtung der geltenden Datenschutzgesetze behandelt.
+                </p>
+
+                <p class="mt-8 text-sm text-gray-600">
+                    Zuletzt aktualisiert: Februar 2026
+                </p>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="index.html" class="inline-block tm-bg-green transition text-white text-xl pt-3 pb-4 px-8 rounded-md">
+                    <i class="fas fa-arrow-left mr-3"></i>
+                    Zurück zur Startseite
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        function checkAndShowHideMenu() {
+            if(window.innerWidth < 768) {
+                $('#tm-nav ul').addClass('hidden');
+            } else {
+                $('#tm-nav ul').removeClass('hidden');
+            }
+        }
+
+        $(function(){
+            checkAndShowHideMenu();
+            window.addEventListener('resize', checkAndShowHideMenu);
+
+            $('#menu-toggle').click(function(){
+                $('#tm-nav ul').toggleClass('hidden');
+            });
+
+            $('#tm-nav ul li').click(function(){
+                if(window.innerWidth < 768) {
+                    $('#tm-nav ul').addClass('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
